@@ -25,6 +25,7 @@ int main()
     c.whoAmI();
     a.takeDamage(20);
     a.attack("bill gates");
+    b.takeDamage(99);
     a.takeDamage(100);
     a.attack("Geroges W Bush");     
 }
