@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/27 12:48:13 by masase            #+#    #+#             */
-/*   Updated: 2025/07/29 15:11:32 by maw              ###   ########.fr       */
+/*   Created: 2025/07/31 13:39:51 by maw               #+#    #+#             */
+/*   Updated: 2025/07/31 13:49:45 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+# include "ClapTrap.hpp"
 
-int main (void)
+class FragTrap: public ClapTrap
 {
-	ClapTrap bg("BG");
+	public:
+		FragTrap(std::string name);
+		~FragTrap();
+		void attack(const std::string& target);
+		void highFivesGuys(void);
+};
 
-	bg.attack("Albert");
-	bg.takeDamage(5);
-	bg.beRepaired(3);
-	bg.takeDamage(4);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);		
-	return (0);
-}
+#endif

@@ -5,15 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: maw <maw@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/31 13:51:22 by maw               #+#    #+#              #
-#    Updated: 2025/07/31 13:53:41 by maw              ###   ########.fr        #
+#    Created: 2025/07/31 13:50:48 by maw               #+#    #+#              #
+#    Updated: 2025/07/31 13:53:47 by maw              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = FragTrap
 
 SRCS = ClapTrap.cpp \
-	main.cpp
+	ScavTrap.cpp \
+	FragTrap.cpp \
+	main.cpp \
+
 
 OBJS = $(SRCS:%.cpp=%.o)
 

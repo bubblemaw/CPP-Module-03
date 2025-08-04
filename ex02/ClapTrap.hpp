@@ -6,7 +6,7 @@
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 12:48:46 by masase            #+#    #+#             */
-/*   Updated: 2025/07/29 15:27:00 by maw              ###   ########.fr       */
+/*   Updated: 2025/07/31 12:50:52 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string _name;
         int _Hit_Points;
         int _Energy_points;
         int _Attack_damage;
     public:
+        ClapTrap();
         ClapTrap(std::string name);
         ~ClapTrap();
         ClapTrap(const ClapTrap &obj);

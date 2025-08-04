@@ -6,7 +6,7 @@
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 12:49:41 by masase            #+#    #+#             */
-/*   Updated: 2025/08/03 22:57:24 by maw              ###   ########.fr       */
+/*   Updated: 2025/08/03 21:43:45 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,28 @@
 
 ClapTrap::ClapTrap(std::string name): _name(name), _Hit_Points(10), _Energy_points(10), _Attack_damage(0)
 {
-	std::cout << "ClapTrap Constructor Called" << std::endl;	
+	std::cout << "ClapTrap Constructor Called" << std::endl; 	
 }
+
+ClapTrap::ClapTrap(void)
+{
+	std::cout << "ClapTrap Constructor Called" << std::endl;    
+}
+
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor Called" << std::endl;
+	std::cout << "ClapTrap Destructor Called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &obj)
 {
-	std::cout << "Copy Constructor Called" << std::endl; 	
+	std::cout << "ClapTrap Copy Constructor Called" << std::endl; 	
 	*this = obj;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &obj)
 {
-	std::cout << "Copy assignment operator called" << std::endl; 	
+	std::cout << "ClapTrap Copy assignment operator called" << std::endl; 	
 	if (this != &obj)
 	{
 		this->_name = obj._name;

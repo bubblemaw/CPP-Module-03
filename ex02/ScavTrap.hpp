@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/27 12:48:13 by masase            #+#    #+#             */
-/*   Updated: 2025/07/29 15:11:32 by maw              ###   ########.fr       */
+/*   Created: 2025/07/29 15:41:42 by maw               #+#    #+#             */
+/*   Updated: 2025/07/31 13:49:42 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "ClapTrap.hpp"
 
-int main (void)
+class ScavTrap: public ClapTrap
 {
-	ClapTrap bg("BG");
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
+		void attack(const std::string& target);
+		void guardGate();
+};
 
-	bg.attack("Albert");
-	bg.takeDamage(5);
-	bg.beRepaired(3);
-	bg.takeDamage(4);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);		
-	return (0);
-}
+#endif

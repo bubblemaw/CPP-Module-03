@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/27 12:48:13 by masase            #+#    #+#             */
-/*   Updated: 2025/07/29 15:11:32 by maw              ###   ########.fr       */
+/*   Created: 2025/08/03 16:58:13 by maw               #+#    #+#             */
+/*   Updated: 2025/08/03 20:28:58 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
-int main (void)
+class DiamondTrap: public ScavTrap, public FragTrap
 {
-	ClapTrap bg("BG");
+	private:
+	std::string _name;
+	public:
+		DiamondTrap(std::string name);
+		~DiamondTrap();
+		void	whoAmI();
+};
 
-	bg.attack("Albert");
-	bg.takeDamage(5);
-	bg.beRepaired(3);
-	bg.takeDamage(4);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);
-	bg.attack("Albert");
-	bg.beRepaired(3);		
-	return (0);
-}
+#endif
