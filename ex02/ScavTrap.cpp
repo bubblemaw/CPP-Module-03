@@ -12,18 +12,44 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
 	std::cout << "ScavTrap Constructor Called" << std::endl;
-    _name = name;
     _Hit_Points = 100;
     _Energy_points = 50;
     _Attack_damage = 20;
 }
 
+ScavTrap::ScavTrap(): ClapTrap()
+{
+	std::cout << "ScavTrap Constructor Called" << std::endl;
+    _Hit_Points = 100;
+    _Energy_points = 50;
+    _Attack_damage = 20;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &obj)
+{
+	std::cout << "ScavTrap Copy Constructor Called" << std::endl;
+    *this = obj;
+}
+
 ScavTrap::~ScavTrap(void)
 {
 	std::cout << "ScavTrap Destructor Called" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &obj)
+{
+	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
+	if (this != &obj)
+	{
+		this->_name = obj._name;
+		this->_Hit_Points = obj._Hit_Points;
+		this->_Energy_points = obj._Energy_points;
+		this->_Attack_damage = obj._Attack_damage;
+	}
+    return (*this);
 }
 
 void ScavTrap::attack(const std::string& target)

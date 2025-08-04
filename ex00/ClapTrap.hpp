@@ -24,6 +24,7 @@ class ClapTrap
         int _Attack_damage;
     public:
         ClapTrap(std::string name);
+        ClapTrap();
         ~ClapTrap();
         ClapTrap(const ClapTrap &obj);
         ClapTrap &operator=(const ClapTrap &obj);
